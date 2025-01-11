@@ -14,7 +14,7 @@ import view.Menu;
 public class Test1 extends Menu<String> {
 
     Scanner sc = new Scanner(System.in);
-    static String[] mainMenu = {"Letter and Character Count", "Linear Search", "Change Base"};
+    static String[] mainMenu = {"Letter and Character Count", "Linear Search", "Change Base", "Equation Calculate"};
 
     public Test1() {
         super("MENU", mainMenu);
@@ -91,10 +91,15 @@ public class Test1 extends Menu<String> {
                             System.out.println("Same Value: " + value);
                         }
                         break;
+
                     default:
                         throw new AssertionError();
                 }
 
+                break;
+            case 4:
+                Calculate cal = new Calculate();
+                cal.menu();
                 break;
 
         }

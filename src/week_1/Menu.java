@@ -21,6 +21,7 @@ public abstract class Menu<T> {
 //-------------------------------------------
 
     public void display() {
+        System.out.println();
         System.out.println(title);
         System.out.println("--------------------------------");
         for (int i = 0; i < mChon.size(); i++) {
