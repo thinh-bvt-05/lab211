@@ -35,9 +35,10 @@ public class LinearSearch {
                 System.out.println("Found " + number + " at index: " + i);
                 break;
             }
-            if (i == array.length - 1) {
+            if (i == array.length-1) {
                 if (number != array[i]) {
                     System.out.println("Not Found");
+                    
                 }
             }
 
