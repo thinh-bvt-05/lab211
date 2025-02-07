@@ -1,4 +1,4 @@
-package week_1;
+ package week_1;
 
 import java.util.Random;
 
@@ -31,20 +31,11 @@ public class LinearSearch {
         addValue();
         showArray();
         for (int i = 0; i < array.length; i++) {
-            if (number == array[i]) {
-                System.out.println("Found " + number + " at index: " + i);
-                break;
-            }
-            if (i == array.length-1) {
-                if (number != array[i]) {
-                    System.out.println("Not Found");
-                    
-                }
-            }
-
+         if(number == array[i])
+                System.out.println("Found "+ number +" at index: "+i);
+             return i;
         }
-
-        return 0;
+        return -1;
     }
 
 }

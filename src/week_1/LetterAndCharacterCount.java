@@ -16,13 +16,14 @@ public class LetterAndCharacterCount {
 
     HashMap<String, Integer> countWord() {
         StringTokenizer tokenizer = new StringTokenizer(input);
-        while (tokenizer.hasMoreTokens()) {
-            String word = tokenizer.nextToken();
-            words.put(word, words.getOrDefault(word, 0) + 1);
-
-        }
-        return words;
-
+       //edit
+       
+       while(tokenizer.hasMoreTokens()){
+           String word = tokenizer.nextToken();
+           words.put(word, words.getOrDefault(word, 0)+1);
+       }
+       return words;
+     
     }
 
     HashMap<Character, Integer> countCharacter() {
