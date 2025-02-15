@@ -35,9 +35,9 @@ public class Test {
                 case 1:
                     bubbleSort();
                     break;
-//                case 2:
-//                    
-//                    break;
+                case 2:
+                    quickSort();
+                    break;
                 case 3:
                     binarySearch();
                     break;
@@ -81,5 +81,14 @@ public class Test {
         System.out.print("Stack get at index "+get+" is: ");
         stack.getAt(get);
         
+    }
+    
+    void quickSort(){
+      //  int n = Ultils.checkNum();
+        QuickSort quickSort = new QuickSort(Ultils.checkNum());
+        quickSort.addValue();
+        quickSort.showArray();
+        quickSort.quickSort(quickSort.getArray(), 0, quickSort.getArray().length-1);
+        quickSort.showArray();
     }
 }
