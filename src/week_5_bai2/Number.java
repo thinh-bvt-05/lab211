@@ -30,29 +30,26 @@ public class Number {
 //    }
     
     public String addLargeNum(String so1, String so2){
-        
-        
         int max = Math.max(so1.length(), so2.length());
-        so1=String.format("%"+max+"s", so1).replace(' ', '0');
-        so2=String.format("%"+max+"s", so2).replace(' ', '0');
+        
+        so1 = String.format("%"+max +"s", so1).replace(' ','0');
+        so2 = String.format("%"+max+"s", so2).replace(' ', '0');
         
         StringBuilder result = new StringBuilder();
-        //gia su 2 so do dai bang nhau
-        int soDu= 0;
-        for(int i=so1.length()-1;i>=0;i--){
+        int soDu = 0;
+        
+        for(int i = so1.length()-1; i >= 0; i--){
             int s1 = so1.charAt(i) - '0';
             int s2 = so2.charAt(i) - '0';
             int sum = s1+s2+soDu;
-            result.append(sum % 10);
-            soDu = sum / 10;
+            result.append(sum%10);
+            soDu=sum/10;
         }
-        
-        if(soDu > 0){
+        if(soDu>0){
             result.append(soDu);
-            
         }
-        
         return result.reverse().toString();
+        
     }
     
     private String multiplyLargeNum(String n1, String n2){
