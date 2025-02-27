@@ -5,11 +5,14 @@
 
 package week_5;
 
+import java.util.List;
+import java.util.Scanner;
+
 /**
  *
  * @author ThinhBui
  */
-public class OnlineCourse extends Cource{
+public class OnlineCourse extends Course{
     private String platform;
     private String instructors;
     private String note;
@@ -44,40 +47,19 @@ public class OnlineCourse extends Cource{
     public void setNote(String note) {
         this.note = note;
     }
-
-    public String getCourseID() {
-        return courseID;
-    }
-
-    public void setCourseID(String courseID) {
-        this.courseID = courseID;
-    }
-
-    public String getCourseName() {
-        return courseName;
-    }
-
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
-    }
-
-    public int getCredits() {
-        return credits;
-    }
-
-    public void setCredits(int credits) {
-        this.credits = credits;
-    }
     
-    
-    
-    public void inputAll(){
+    @Override
+    public void inputAll(Scanner sc, List<Course> online){
+        super.inputAll(sc, online);
+        platform=Utils.checkEmpty("Platform: ");
+        instructors=Utils.input("Instructos: ");
+        note=Utils.checkEmpty("Note: ");
         
     }
 
     @Override
     public String toString() {
-        return super.toString() + "OnlineCourse{" + "platform=" + platform + ", instructors=" + instructors + ", note=" + note + '}';
+        return super.toString() + " - " + platform + " - " + instructors + " - " + note;
     }
     
     
